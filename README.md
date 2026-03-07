@@ -1,4 +1,8 @@
 # Particle Collision Monte Carlo Simulator
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
+![NumPy](https://img.shields.io/badge/NumPy-vectorized-green)
+![MonteCarlo](https://img.shields.io/badge/Method-Monte%20Carlo-purple)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 A production-quality Monte Carlo simulator for simplified high-energy particle collisions, built with Python and scientific computing libraries. Features a stunning **Next.js dashboard** with real-time particle collision animations, interactive simulations, and publication-quality visualizations.
 
@@ -25,7 +29,14 @@ A production-quality Monte Carlo simulator for simplified high-energy particle c
 17. [Scientific Limitations](#scientific-limitations)
 18. [Future Research Extensions](#future-research-extensions)
 19. [Technology Stack](#technology-stack)
-20. [License](#license)
+20. [Citation](#citation)
+21. [Reproducible Research Workflow](#reproducible-research-workflow)
+22. [Example Configuration File](#example-configuration-file)
+23. [Dataset Schema Diagram](#dataset-schema-diagram)
+24. [Computational Complexity](#computational-complexity)
+25. [Relation to Real High-Energy Physics Tools](#relation-to-real-high-energy-physics-tools)
+26. [Contributing](#contributing)
+27. [License](#license)
 
 ---
 
@@ -697,6 +708,137 @@ These simplifications are intentional — the simulator prioritises **conceptual
 | **KaTeX** | LaTeX math rendering |
 | **Recharts** | Composable chart library |
 | **Lucide React** | SVG icon set |
+
+---
+
+## Citation
+
+If you use this simulator in research or academic work, please cite:
+
+```bibtex
+@software{singh2026montecarlo,
+  author  = {Abhinav Kumar Singh},
+  title   = {Particle Collision Monte Carlo Simulator},
+  year    = {2026},
+  url     = {https://github.com/abhinav29102005/monte-carlo}
+}
+```
+
+This makes the repo **usable in academic publications**.
+
+---
+
+## Reproducible Research Workflow
+
+Typical scientific workflow using this simulator:
+
+1. Configure experiment parameters.
+2. Generate collision events using Monte Carlo sampling.
+3. Export datasets (CSV / NPZ).
+4. Perform statistical analysis.
+5. Visualize distributions and correlations.
+6. Interpret physical results.
+
+Because the simulator supports deterministic seeds and pinned dependencies,
+all experiments can be reproduced exactly across machines.
+
+---
+
+## Example Configuration File
+
+Instead of only CLI flags, add YAML config.
+
+### Example Configuration
+
+`simulation_config.yaml`
+
+```yaml
+events: 100000
+energy_min: 1
+energy_max: 1000
+seed: 42
+save_dataset: true
+generate_plots: true
+```
+
+Run simulation:
+
+```bash
+python src/main.py --config simulation_config.yaml
+```
+
+Research projects typically rely on **configuration-driven experiments**.
+
+---
+
+## Dataset Schema Diagram
+
+```text
+Collision Dataset Schema
+
+event_id
+│
+├── particle_A_energy (GeV)
+├── particle_B_energy (GeV)
+│
+├── collision_angle (rad)
+│
+├── momentum
+│   ├── px (GeV/c)
+│   ├── py (GeV/c)
+│   └── pz (GeV/c)
+│
+└── final_state
+    ├── energy_1 (GeV)
+    └── energy_2 (GeV)
+```
+
+---
+
+## Computational Complexity
+
+Because the simulation is fully vectorised with NumPy, the complexity is:
+
+```text
+O(N)
+```
+
+where N is the number of generated events.
+
+No Python-level loops are used, allowing high throughput
+(>650k events per second on modern CPUs).
+
+---
+
+## Relation to Real High-Energy Physics Tools
+
+This simulator demonstrates simplified versions of techniques used in
+modern particle physics frameworks such as:
+
+• GEANT4 — detector simulation framework used by CERN  
+• ROOT — data analysis framework for high-energy physics  
+• Pythia — event generator for particle collisions  
+
+While simplified, the architecture mirrors the workflow of real
+HEP simulation pipelines.
+
+This anchors your project to real research infrastructure.
+
+---
+
+## Contributing
+
+Contributions are welcome.
+
+Possible areas for improvement include:
+
+• additional physics models  
+• relativistic scattering processes  
+• detector simulation  
+• ROOT dataset export  
+• GPU acceleration  
+
+Please open an issue or submit a pull request.
 
 ---
 
