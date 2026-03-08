@@ -36,7 +36,7 @@ A production-quality Monte Carlo simulator for simplified high-energy particle c
 24. [Computational Complexity](#computational-complexity)
 25. [Relation to Real High-Energy Physics Tools](#relation-to-real-high-energy-physics-tools)
 26. [Contributing](#contributing)
-27. [License](#license)
+
 
 ---
 
@@ -840,10 +840,4 @@ Possible areas for improvement include:
 
 Please open an issue or submit a pull request.
 
----
 
-## License
-
-MIT License — see [LICENSE](LICENSE) for full text.
-
-This project is released for educational and portfolio purposes.
