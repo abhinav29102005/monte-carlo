@@ -1,0 +1,152 @@
+====================================================================
+  PARTICLE COLLISION MONTE CARLO — STATISTICAL ANALYSIS REPORT
+  Generated: 2026-03-07 23:59:17 UTC
+====================================================================
+
+1. DESCRIPTIVE STATISTICS
+--------------------------------------------------------------------
+
+  ▸ event_id
+          mean =     25000.5000
+           std =     14433.7567
+           var = 208333333.2500
+           min =         1.0000
+           max =     50000.0000
+        median =     25000.5000
+
+  ▸ particle_A_energy
+          mean =       501.3902
+           std =       288.3286
+           var =     83133.3546
+           min =         1.0132
+           max =       999.9937
+        median =       503.7892
+
+  ▸ particle_B_energy
+          mean =       500.8584
+           std =       288.1330
+           var =     83020.6432
+           min =         1.0133
+           max =       999.9521
+        median =       502.2023
+
+  ▸ collision_angle
+          mean =         1.5719
+           std =         0.6830
+           var =         0.4665
+           min =         0.0136
+           max =         3.1314
+        median =         1.5762
+
+  ▸ momentum_x
+          mean =        -6.9285
+           std =       472.2562
+           var =    223025.9522
+           min =     -1848.8593
+           max =      1732.2041
+        median =        -4.9571
+
+  ▸ momentum_y
+          mean =        -2.9801
+           std =       472.4696
+           var =    223227.5573
+           min =     -1870.4764
+           max =      1852.4600
+        median =        -1.2157
+
+  ▸ momentum_z
+          mean =         0.4713
+           std =       235.8749
+           var =     55636.9482
+           min =      -956.0848
+           max =       940.1558
+        median =         0.3688
+
+  ▸ final_energy_1
+          mean =       501.0411
+           std =       212.7841
+           var =     45277.0881
+           min =         3.5425
+           max =      1158.3295
+        median =       493.8866
+
+  ▸ final_energy_2
+          mean =       501.2076
+           std =       212.4247
+           var =     45124.2698
+           min =         3.9204
+           max =      1184.8772
+        median =       494.9589
+
+  ▸ sqrt_s
+          mean =       700.1866
+           std =       421.4616
+           var =    177629.8456
+           min =         3.2062
+           max =      1986.3824
+        median =       643.9009
+
+
+2. DISTRIBUTION FITS
+--------------------------------------------------------------------
+
+  ▸ Particle A beam energy  (particle_A_energy)
+            normal  KS = 0.058955  p = 0.000000  params = (np.float64(501.39021448981407), np.float64(288.328553206996))
+         lognormal  KS = 0.058953  p = 0.000000  params = (np.float64(3.810481454111238e-05), -7566222.213911129, np.float64(7566723.598632266))
+       exponential  KS = 0.154248  p = 0.000000  params = (1.0131553876512693, 500.3770591021628)
+
+  ▸ Particle B beam energy  (particle_B_energy)
+            normal  KS = 0.057342  p = 0.000000  params = (np.float64(500.8584089611791), np.float64(288.13303045727247))
+         lognormal  KS = 0.057340  p = 0.000000  params = (np.float64(3.434608814202343e-05), -8388606.986730977, np.float64(8389107.840191815))
+       exponential  KS = 0.155515  p = 0.000000  params = (1.0132690228936152, 499.8451399382855)
+
+  ▸ Collision angle θ  (collision_angle)
+            normal  KS = 0.030054  p = 0.000000  params = (np.float64(1.571932270080005), np.float64(0.6829949377412635))
+         lognormal  KS = 0.030050  p = 0.000000  params = (np.float64(8.335755441301995e-05), -8191.986388748282, np.float64(8193.558292551965))
+       exponential  KS = 0.246129  p = 0.000000  params = (0.013611251709033996, 1.5583210183709708)
+
+  ▸ Final-state energy 1  (final_energy_1)
+            normal  KS = 0.014638  p = 0.000000  params = (np.float64(501.0410704409361), np.float64(212.7841349714176))
+         lognormal  KS = 0.013207  p = 0.000000  params = (np.float64(0.08067336577380116), -2135.8947860517223, np.float64(2628.373968918167))
+       exponential  KS = 0.266048  p = 0.000000  params = (3.5425497213609205, 497.4985207195752)
+
+  ▸ Final-state energy 2  (final_energy_2)
+            normal  KS = 0.015539  p = 0.000000  params = (np.float64(501.207553010057), np.float64(212.42473924595967))
+         lognormal  KS = 0.012924  p = 0.000000  params = (np.float64(0.08095709462399045), -2122.065778309887, np.float64(2614.695945569751))
+       exponential  KS = 0.267103  p = 0.000000  params = (3.920437016798987, 497.287115993258)
+
+  ▸ Invariant mass √s  (sqrt_s)
+            normal  KS = 0.059750  p = 0.000000  params = (np.float64(700.1865831546882), np.float64(421.4615588425424))
+         lognormal  KS = 0.033888  p = 0.000000  params = (np.float64(0.35017039708196), -523.6281333788444, np.float64(1152.4331710786885))
+       exponential  KS = 0.150321  p = 0.000000  params = (3.2062097422291775, 696.980373412459)
+
+
+3. ENERGY CONSERVATION CHECK
+--------------------------------------------------------------------
+  Mean residual (E_beam − E_final) : +2.017941e-17 GeV
+  Std  residual                    : 1.171548e-14 GeV
+  Max  |residual|                  : 2.273737e-13 GeV
+  Mean √s (invariant mass)         : 700.1866 GeV
+  Std  √s                          : 421.4658 GeV
+
+
+4. TOTAL MOMENTUM BALANCE
+--------------------------------------------------------------------
+  <  momentum_x> = -6.9285 ± 472.2610 GeV/c
+  <  momentum_y> = -2.9801 ± 472.4744 GeV/c
+  <  momentum_z> = +0.4713 ± 235.8772 GeV/c
+
+
+5. PEARSON CORRELATION MATRIX (selected columns)
+--------------------------------------------------------------------
+                   particle_A_energy  particle_B_energy  collision_angle  final_energy_1  final_energy_2    sqrt_s
+particle_A_energy           1.000000          -0.004921        -0.005944        0.675855        0.673647  0.570428
+particle_B_energy          -0.004921           1.000000        -0.003135        0.673293        0.675289  0.567589
+collision_angle            -0.005944          -0.003135         1.000000       -0.006365       -0.005943 -0.005387
+final_energy_1              0.675855           0.673293        -0.006365        1.000000        0.828916  0.770980
+final_energy_2              0.673647           0.675289        -0.005943        0.828916        1.000000  0.771848
+sqrt_s                      0.570428           0.567589        -0.005387        0.770980        0.771848  1.000000
+
+====================================================================
+  END OF REPORT
+====================================================================
